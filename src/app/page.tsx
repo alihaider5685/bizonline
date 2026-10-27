@@ -3,7 +3,11 @@ import { Check } from "lucide-react";
 import { SiteHeader } from "@/components/marketing/site-header";
 import { SiteFooter } from "@/components/marketing/site-footer";
 import { Hero } from "@/components/marketing/hero";
+import { FactsStrip } from "@/components/marketing/facts-strip";
 import { Features } from "@/components/marketing/features";
+import { HowItWorks } from "@/components/marketing/how-it-works";
+import { ProductPreview } from "@/components/marketing/product-preview";
+import { WhoFor } from "@/components/marketing/who-for";
 import { plans } from "@/mock-data/plans";
 
 export default function Home() {
@@ -11,7 +15,11 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <Hero />
+      <FactsStrip />
       <Features />
+      <HowItWorks />
+      <ProductPreview />
+      <WhoFor />
 
       <section id="pricing" className="mx-auto max-w-6xl px-6 py-16">
         <h2 className="text-center text-3xl font-bold text-foreground">Simple pricing</h2>
