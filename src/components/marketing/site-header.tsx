@@ -11,12 +11,12 @@ export function SiteHeader() {
         </Link>
 
         <nav className="flex items-center gap-6 text-sm font-medium">
-          <a href="/#features" className="hidden text-foreground hover:text-accent sm:inline">
+          <Link href="/#features" className="hidden text-foreground hover:text-accent sm:inline">
             Features
-          </a>
-          <a href="/#pricing" className="hidden text-foreground hover:text-accent sm:inline">
+          </Link>
+          <Link href="/#pricing" className="hidden text-foreground hover:text-accent sm:inline">
             Pricing
-          </a>
+          </Link>
           <Link href="/login" className="text-foreground hover:text-accent">
             Login
           </Link>
