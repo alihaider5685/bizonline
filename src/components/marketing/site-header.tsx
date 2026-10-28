@@ -2,6 +2,12 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Logo } from "./logo";
 
+const links = [
+  { label: "Features", href: "/features" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "FAQ", href: "/faq" },
+];
+
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-900/5 bg-white/80 backdrop-blur">
@@ -11,12 +17,15 @@ export function SiteHeader() {
         </Link>
 
         <nav className="flex items-center gap-6 text-sm font-medium">
-          <Link href="/#features" className="hidden text-foreground hover:text-accent sm:inline">
-            Features
-          </Link>
-          <Link href="/#pricing" className="hidden text-foreground hover:text-accent sm:inline">
-            Pricing
-          </Link>
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="hidden text-foreground hover:text-accent sm:inline"
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link href="/login" className="text-foreground hover:text-accent">
             Login
           </Link>
